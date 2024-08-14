@@ -1,0 +1,10 @@
+openai
+requests
+numpy
+xmltodict
+beautifulsoup4
+python-dotenv
+sentence-transformers
+langchain
+scikit-learn
+
