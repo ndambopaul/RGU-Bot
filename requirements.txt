@@ -7,4 +7,4 @@ python-dotenv
 sentence-transformers
 langchain
 scikit-learn
-
+django
