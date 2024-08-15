@@ -1,12 +1,15 @@
 import os
 import openai
 from dotenv import load_dotenv
+from chatbot.models import KeyStore
 
 # Load environment variables from .env file
 load_dotenv()  # This will automatically load variables from .env file into environment
 
 # Load OpenAI API key from environment variable
-api_key = os.getenv("OPENAI_API_KEY")
+key = KeyStore.objects.filter(key="openai").first()
+api_key = key.value  #os.getenv("OPENAI_API_KEY")
+
 if api_key is None:
     raise ValueError("OpenAI API key is not set in the environment variables.")
 openai.api_key = api_key
